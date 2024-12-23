@@ -7,7 +7,7 @@ close all;
 
 % Define the neutral steering input threshold
 neutralSteeringInput = 4433;
-referenceHeading = 87.6688;
+referenceHeading = -2.3312;
 
 %% Step 1: Load optical tracking data from file
 % Specify the filename of the cleaned optical tracking data
@@ -28,7 +28,7 @@ posXB = opticalTrackingData.xB;              % Position xB
 posYB = opticalTrackingData.yB;              % Position yB
 
 % Calculate vehicle heading using arctangent of position differences
-headingAngle = atan2(posYA - posYB, posXA - posXB) * (180/pi) - referenceHeading;
+headingAngle = atan2(posYA - posYB, posXA - posXB) * (180/pi) - 90 + referenceHeading;
 
 
 %% Step 3: Load steering data from logger

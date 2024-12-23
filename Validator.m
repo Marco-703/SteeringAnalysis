@@ -32,4 +32,4 @@ posXB = 1260;
 posYB = 1100;
 right = atan2(posXA - posXB, posYA - posYB) * (180/pi) - reference;
 
-disp(180 - right);
+disp(-180 + right);

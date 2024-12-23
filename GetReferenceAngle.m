@@ -25,7 +25,7 @@ posXB = opticalTrackingData.xB;              % Position xB
 posYB = opticalTrackingData.yB;              % Position yB
 
 % Calculate vehicle heading using arctangent of position differences
-headingAngle = atan2(posYA - posYB, posXA - posXB) * (180/pi);
+headingAngle = atan2(posYA - posYB, posXA - posXB) * (180/pi) - 90;
 headingAngle = mean(headingAngle);
 
 disp('Average');
